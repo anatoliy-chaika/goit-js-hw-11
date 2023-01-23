@@ -71,19 +71,19 @@ function createMarcup(array) {
   <img class="img" src="${webformatURL}" alt="${tags}" loading="lazy" />
   <div class="info">
     <p class="info-item">
-      <b>Likes</b>
+      <b class="strong">Likes</b>
        ${likes}
     </p>
     <p class="info-item">
-      <b>Views</b>
+      <b class="strong">Views</b>
       ${views}
     </p>
     <p class="info-item">
-      <b>Comments</b>
+      <b class="strong">Comments</b>
       ${comments}
     </p>
     <p class="info-item">
-      <b>Downloads</b>
+      <b class="strong">Downloads</b>
       ${downloads}
     </p>
   </div>
@@ -111,3 +111,5 @@ function loadMore() {
     })
     .catch(error => console.log(error.message));
 }
+
+let gallery = new SimpleLightbox('.gallery a');
