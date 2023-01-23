@@ -34,10 +34,16 @@ function getInfo(e) {
         );
         return;
       }
+
       Notiflix.Notify.info(`Hooray! We found ${data.data.totalHits} images.`);
       createMarcup(data.data.hits);
       loadBtn.hidden = false;
+
+      if (divRef.children.length >= data.data.totalHits) {
+        loadBtn.hidden = true;
+      }
     })
+
     .catch(error => console.log(error.message));
 }
 
@@ -105,3 +111,5 @@ function loadMore() {
     })
     .catch(error => console.log(error.message));
 }
+
+let gallery = new SimpleLightbox('.gallery a');
