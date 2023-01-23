@@ -9,7 +9,7 @@ const loadBtn = document.querySelector('.load-more');
 const divRef = document.querySelector('.gallery');
 let page = 1;
 
-loadBtn.hidden = true;
+// loadBtn.hidden = true;
 
 // console.log(formRef);
 
@@ -61,8 +61,8 @@ function createMarcup(array) {
         views,
         comments,
         downloads,
-      }) => `<div class="photo-card">
-  <img src="${webformatURL}" alt="${tags}" loading="lazy" />
+      }) => `<div  class="photo-card">
+  <img class="img" src="${webformatURL}" alt="${tags}" loading="lazy" />
   <div class="info">
     <p class="info-item">
       <b>Likes</b>
