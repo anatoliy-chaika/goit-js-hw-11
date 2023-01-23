@@ -8,6 +8,9 @@ const formRef = document.querySelector('.search-form');
 const loadBtn = document.querySelector('.load-more');
 const divRef = document.querySelector('.gallery');
 let page = 1;
+
+loadBtn.hidden = true;
+
 // console.log(formRef);
 
 formRef.addEventListener('submit', getInfo);
