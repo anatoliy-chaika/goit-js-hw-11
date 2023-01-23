@@ -111,5 +111,3 @@ function loadMore() {
     })
     .catch(error => console.log(error.message));
 }
-
-let gallery = new SimpleLightbox('.gallery a');
